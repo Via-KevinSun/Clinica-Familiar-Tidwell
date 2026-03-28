@@ -1,0 +1,160 @@
+.footer {
+  background: var(--blue-dark);
+  color: rgba(255,255,255,0.8);
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1.2fr;
+  gap: 64px;
+  padding: 72px 24px 56px;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.footer-ecg { width: 80px; height: 32px; }
+.footer-logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+.footer-logo-clinica {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.7);
+}
+.footer-logo-tidwell {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.04em;
+}
+
+.footer-tagline {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.65);
+  max-width: 260px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 10px;
+}
+.social-btn {
+  width: 38px; height: 38px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.8);
+  transition: background var(--transition), color var(--transition);
+}
+.social-btn:hover { background: var(--red); color: var(--white); }
+
+/* NAV COL */
+.footer-col-title {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 16px;
+}
+.footer-nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.footer-link {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.7);
+  transition: color var(--transition);
+  display: block;
+}
+.footer-link:hover { color: var(--white); }
+
+/* CONTACT COL */
+.footer-contact-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-address-link {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.6;
+  font-style: normal;
+  transition: color var(--transition);
+}
+.footer-address-link:hover { color: var(--white); }
+
+.btn-footer-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--red);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.875rem;
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin-top: 8px;
+  width: fit-content;
+  transition: background var(--transition);
+  box-shadow: 0 4px 16px rgba(194,30,35,0.25);
+}
+.btn-footer-cta:hover { background: #a01519; }
+
+/* BOTTOM BAR */
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 18px 0;
+}
+.footer-bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.45);
+}
+.footer-legal {
+  display: flex;
+  gap: 20px;
+}
+.legal-link {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.45);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: color var(--transition);
+}
+.legal-link:hover { color: rgba(255,255,255,0.8); }
+
+@media (max-width: 900px) {
+  .footer-inner { grid-template-columns: 1fr 1fr; gap: 40px; }
+}
+@media (max-width: 560px) {
+  .footer-inner { grid-template-columns: 1fr; gap: 32px; padding: 48px 24px 40px; }
+  .footer-bottom-inner { flex-direction: column; text-align: center; }
+}

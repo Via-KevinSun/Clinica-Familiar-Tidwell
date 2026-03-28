@@ -1,0 +1,191 @@
+.top-bar {
+  background: var(--blue);
+  color: rgba(255,255,255,0.88);
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 7px 0;
+}
+.top-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.top-bar-phone,
+.top-bar-addr {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  transition: box-shadow var(--transition), border-color var(--transition);
+}
+.header.scrolled {
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  height: 72px;
+}
+
+/* LOGO */
+.logo { flex-shrink: 0; }
+.logo-placeholder {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-icon-area {
+  width: 80px;
+  height: 32px;
+  /* Reserve space for real logo image */
+  background: transparent;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px dashed var(--blue-light);
+  overflow: hidden;
+}
+.logo-ecg { width: 80px; height: 32px; }
+.logo-text-block {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+.logo-clinica {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--blue);
+}
+.logo-tidwell {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--blue);
+  letter-spacing: 0.04em;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+  justify-content: center;
+}
+.nav-link {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gray-dark);
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: color var(--transition), background var(--transition);
+}
+.nav-link:hover {
+  color: var(--blue);
+  background: var(--blue-light);
+}
+
+/* ACTIONS */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.lang-toggle {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--blue);
+  border: 1.5px solid var(--blue);
+  border-radius: 100px;
+  padding: 4px 12px;
+  transition: all var(--transition);
+  background: transparent;
+}
+.lang-toggle:hover {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--red);
+  color: var(--white);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 9px 20px;
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+  box-shadow: 0 2px 12px rgba(194,30,35,0.18);
+  white-space: nowrap;
+}
+.btn-cta:hover {
+  background: #a01519;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(194,30,35,0.28);
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px;
+}
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--blue);
+  border-radius: 2px;
+  transition: all var(--transition);
+}
+.hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+@media (max-width: 900px) {
+  .hamburger { display: flex; }
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    border-top: 1px solid var(--border);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 24px 20px;
+    gap: 2px;
+    box-shadow: var(--shadow-lg);
+  }
+  .nav.open { display: flex; }
+  .nav-link { width: 100%; font-size: 1rem; padding: 10px 8px; }
+  .header-inner { position: relative; }
+}
+
+@media (max-width: 520px) {
+  .btn-cta { display: none; }
+  .top-bar-addr { display: none; }
+}

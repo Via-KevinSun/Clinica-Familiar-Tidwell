@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --red: #C21E23;
+  --blue: #1E59A8;
+  --blue-dark: #154080;
+  --blue-light: #e8f0fb;
+  --gray-dark: #1A1A1A;
+  --gray-mid: #4a4a4a;
+  --gray-light: #f5f6f8;
+  --white: #FFFFFF;
+  --border: #e2e6ef;
+  --shadow: 0 4px 24px rgba(30, 89, 168, 0.10);
+  --shadow-lg: 0 12px 48px rgba(30, 89, 168, 0.15);
+  --radius: 12px;
+  --transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  color: var(--gray-dark);
+  background: var(--white);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  line-height: 1.2;
+  color: var(--blue);
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+/* Utilities */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.section-tag {
+  display: inline-block;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--blue);
+  background: var(--blue-light);
+  border-radius: 100px;
+  padding: 4px 14px;
+  margin-bottom: 16px;
+}
+
+/* Scroll reveal animation */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal { animation: fadeUp 0.6s ease both; }
+.reveal-d1 { animation-delay: 0.1s; }
+.reveal-d2 { animation-delay: 0.2s; }
+.reveal-d3 { animation-delay: 0.3s; }
+.reveal-d4 { animation-delay: 0.4s; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--gray-light); }
+::-webkit-scrollbar-thumb { background: var(--blue); border-radius: 3px; }

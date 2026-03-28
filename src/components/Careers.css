@@ -1,0 +1,102 @@
+.careers {
+  padding: 96px 0;
+  background: var(--gray-light);
+}
+.careers-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+.careers-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.careers-text h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); }
+.careers-text p { color: var(--gray-mid); line-height: 1.75; }
+
+.btn-careers {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--blue);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 13px 24px;
+  border-radius: 10px;
+  margin-top: 8px;
+  width: fit-content;
+  transition: background var(--transition), transform var(--transition);
+  box-shadow: 0 4px 16px rgba(30,89,168,0.18);
+}
+.btn-careers:hover { background: var(--blue-dark); transform: translateY(-2px); }
+
+.positions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.position-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+}
+.position-card:hover {
+  border-color: var(--blue);
+  box-shadow: var(--shadow);
+  transform: translateX(4px);
+}
+.position-icon {
+  width: 48px; height: 48px;
+  background: var(--blue-light);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue);
+  flex-shrink: 0;
+}
+.position-details {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+}
+.position-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--gray-dark);
+}
+.position-type {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--blue);
+  background: var(--blue-light);
+  padding: 2px 10px;
+  border-radius: 100px;
+  width: fit-content;
+}
+.position-apply {
+  width: 36px; height: 36px;
+  border-radius: 8px;
+  background: var(--gray-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue);
+  transition: background var(--transition), color var(--transition);
+  flex-shrink: 0;
+}
+.position-apply:hover { background: var(--blue); color: var(--white); }
+
+@media (max-width: 860px) {
+  .careers-inner { grid-template-columns: 1fr; gap: 40px; }
+  .careers { padding: 64px 0; }
+}
