@@ -15,7 +15,6 @@ import './index.css';
 export default function App() {
   return (
     <LanguageProvider>
-      {/* SEO Meta Tags are in public/index.html */}
       <Header />
       <main>
         <Hero />
